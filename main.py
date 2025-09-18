@@ -140,6 +140,12 @@ def localize_detail_doc(doc: dict, lang: str):
         "description": pick_lang_value(doc.get("description"), lang),
         "maxGuests": doc.get("maxGuests"),
         "minNights": doc.get("minNights"),
+        "cancellationPolicy": pick_lang_value(doc.get("cancellationPolicy"), lang),
+        "smokingPolicy": pick_lang_value(doc.get("smokingPolicy"), lang),
+        "checkinTime": doc.get("checkinTime"),
+        "checkoutTime": doc.get("checkoutTime"),
+        "cleaningFee": doc.get("cleaningFee"),
+        "serviceFee": doc.get("serviceFee")
     })
 
     host = doc.get("host") or {}
